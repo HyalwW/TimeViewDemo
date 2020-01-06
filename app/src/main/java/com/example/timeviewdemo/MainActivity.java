@@ -10,11 +10,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ((TimeView) findViewById(R.id.time)).tick();
+        ((FloatTimeView) findViewById(R.id.time1)).start();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         ((TimeView) findViewById(R.id.time)).destroy();
+        ((FloatTimeView) findViewById(R.id.time)).destroy();
     }
 }
